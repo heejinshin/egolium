@@ -43,24 +43,29 @@ class ColumnGraphExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Container(
-      child: new Stack(
-        children: [
-          new charts.BarChart(seriesList,
-              animate: animate,
-              primaryMeasureAxis: new charts.NumericAxisSpec(
-                    tickProviderSpec: new charts.StaticNumericTickProviderSpec(
-                      <charts.TickSpec<num>>[
-                        charts.TickSpec(0.8, label: ''),
-                        charts.TickSpec(0, label: '0'),
-                        charts.TickSpec(0.38, label: '0.38'),
-                        charts.TickSpec(0.67, label: '0.67'),
-                        charts.TickSpec(0.96, label: '0.96'),
-                        charts.TickSpec(1.25, label: '1.25'),
-                      ],
-                    ),
-              ))
-        ],
-      ),
+      // width: 100,
+      // height: 100,
+      // child: FittedBox(
+      //   fit:BoxFit.contain,
+        child: new Stack(
+          children: [
+            new charts.BarChart(seriesList,
+                animate: animate,
+                primaryMeasureAxis: new charts.NumericAxisSpec(
+                      tickProviderSpec: new charts.StaticNumericTickProviderSpec(
+                        <charts.TickSpec<num>>[
+                          charts.TickSpec(0.8, label: ''),
+                          charts.TickSpec(0, label: '0'),
+                          charts.TickSpec(0.38, label: '0.38'),
+                          charts.TickSpec(0.67, label: '0.67'),
+                          charts.TickSpec(0.96, label: '0.96'),
+                          charts.TickSpec(1.25, label: '1.25'),
+                        ],
+                      ),
+                ))
+          ],
+        ),
+
     );
   }
 }
