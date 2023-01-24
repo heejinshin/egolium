@@ -1,8 +1,11 @@
 import 'package:egolium/chatgpt/column_graph.dart';
+import 'package:egolium/lockscreen/pattern_lock/main.dart';
 import 'package:egolium/pfp/pfp_card.dart';
 import 'package:egolium/pfp/pfp_page.dart';
+import 'package:egolium/start_page.dart';
 import 'package:flutter/material.dart';
 import 'home/home_page.dart';
+
 
 
 void main() {
@@ -39,8 +42,12 @@ class TestPage extends StatelessWidget {
             Navigator.push(context, MaterialPageRoute(builder:(context)=>PfpPage()));
           }, child: Text("test pfp page")),
           ElevatedButton(onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder:(context)=>ColumnGraph()));
-          }, child: Text("GraphArea"))
+            Navigator.push(context, MaterialPageRoute(builder:(context)=>PatternLock()));
+          }, child: Text("PatternLock")),
+          ElevatedButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder:(context)=>StartPage()));
+          }, child: Text("lockscreen")),
+
         ],
       ),
     );

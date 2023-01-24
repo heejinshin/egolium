@@ -1,5 +1,6 @@
 import 'package:egolium/chatgpt/column_graph.dart';
 import 'package:egolium/component/bottom_bar.dart';
+import 'package:egolium/pfp/pfp_page.dart';
 import 'package:flutter/material.dart';
 import '../component/appbar.dart';
 
@@ -51,7 +52,7 @@ class _HomePageComponentState extends State<HomePageComponent> {
       ),
       extendBodyBehindAppBar: true,
       bottomNavigationBar: MyBottomBar(),
-      body: GraphArea(),
+      body: PfpPage(),
     );
   }
 }

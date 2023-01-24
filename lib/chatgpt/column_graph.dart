@@ -1,38 +1,6 @@
 import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
 
-class GraphArea extends StatefulWidget {
-  const GraphArea({Key? key}) : super(key: key);
-
-  @override
-  _GraphAreaState createState() => _GraphAreaState();
-}
-
-class _GraphAreaState extends State<GraphArea> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(
-        children: [Container(
-          decoration: BoxDecoration(
-              image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: AssetImage('assets/image/auth_background.png')
-              )
-          ),
-        ),
-          Container(
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),
-                color: Colors.white),
-            width: 200,
-            height: 250,
-          ),
-        ]
-      ),
-    );
-  }
-}
-
 
 class ColumnGraphExample extends StatelessWidget {
   final List<charts.Series<dynamic, String>> seriesList;
@@ -43,6 +11,7 @@ class ColumnGraphExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Container(
+      constraints: BoxConstraints.tightFor(width: 50, height: 50),
       // width: 100,
       // height: 100,
       // child: FittedBox(

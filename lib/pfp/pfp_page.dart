@@ -4,6 +4,9 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/parser.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../home/home_page.dart';
+import '../main.dart';
+
 class PfpPage extends StatefulWidget {
   const PfpPage({Key? key}) : super(key: key);
 
@@ -47,7 +50,10 @@ class _PfpPageState extends State<PfpPage> {
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Colors.transparent,
-        leading: Icon(Icons.arrow_back_outlined),
+        leading: IconButton(onPressed: (){
+          Navigator.push(context, MaterialPageRoute(builder:(context)=>TestPage()));
+        }, icon: Icon(Icons.arrow_back_outlined),
+         ),
         title: Text('MY ID Balance \$298.98'),
         actions: [Icon(Icons.menu)],
       ),
